@@ -5,6 +5,8 @@ module.exports = {
   collectCoverageFrom: [
     'src/**/*.ts',
     '!src/index.ts',
+    '!src/server.ts',
     '!node_modules/**'
-  ]
+  ],
+  reporters: [ 'jest-junit', 'default' ]
 };

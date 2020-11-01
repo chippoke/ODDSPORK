@@ -1,9 +1,11 @@
 import Koa from 'koa';
+import bodyParser from 'koa-bodyparser';
+import routeInit from './routers';
 
 const app = new Koa();
 
-app.use(ctx => {
-  ctx.body = { 'hi': 'there' };
-});
+routeInit(app);
+
+app.use(bodyParser());
 
 export default app;
